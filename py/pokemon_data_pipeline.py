@@ -48,7 +48,7 @@ def main():
 
     df_clean = clean_data(db_path)
 
-    print(df_clean.to_string())
+    df_clean.to_json("data/pokemon.json", orient="records", indent=2)
 
 if __name__ == "__main__":
     main()
