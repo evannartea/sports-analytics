@@ -10,9 +10,8 @@ body {
 .grid-container {
     display: grid;
     background: transparent;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
+    grid-template-rows: auto;
+    grid-template-areas:
         "header"
         "main";
     height: 100vh;
@@ -22,8 +21,6 @@ body {
 
 .header {
     grid-area: header;
-    height: 150px;
-    padding: 0 30px;
 
     display: flex;
     align-items: center;
@@ -34,10 +31,10 @@ body {
 
 .main-container {
     grid-area: main;
-    padding: 20px 20px;
+    padding: 10px;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
