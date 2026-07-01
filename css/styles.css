@@ -17,7 +17,7 @@ body {
     height: 100vh;
 }
 
-/* -- HEADER -- */
+/* ----- HEADER ----- */
 
 .header {
     grid-area: header;
@@ -27,7 +27,7 @@ body {
     justify-content: center;
 }
 
-/* -- MAIN -- */
+/* ----- MAIN ----- */
 
 .main-container {
     grid-area: main;
@@ -38,7 +38,7 @@ body {
     justify-content: center;
 }
 
-/* Pokedex Image */
+/* -- Pokedex Image -- */
 
 .pokedex-wrapper {
     position: relative;
@@ -51,11 +51,17 @@ body {
     height: auto;
 }
 
-/* Decorations */
+/* -- Decorations -- */
 
 .red-circle,
 .black-lines,
-.reset-button {
+.red-line,
+.blue-line,
+.reset-button,
+.left-button,
+.right-button,
+.green-screen,
+.prompt-text {
     position: absolute;
 }
 
@@ -86,6 +92,70 @@ body {
     );
 }
 
+.red-line {
+    top: 66%;
+    left: 27%;
+
+    background-color: #d3242b;
+    height: 10px;
+    width: 60px;
+
+    border-radius: 999px;
+    box-shadow: 0 0 0 2px #222021;
+}
+
+.blue-line {
+    top: 66%;
+    left: 44%;
+
+    background-color: #04a79e;
+    height: 10px;
+    width: 60px;
+
+    border-radius: 999px;
+    box-shadow: 0 0 0 2px #222021;
+}
+
+.green-screen {
+    bottom: 7%;
+    left: 15%;
+
+    background-color: #3ab549;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    height: 100px;
+    width: 200px;
+    padding: 30px 12px 10px;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px #222021;
+    box-sizing: border-box;
+
+    caret-color: #222021;
+}
+
+.green-screen:focus {
+    outline: none;
+}
+
+.green-screen::placeholder {
+    color: #222021; /* pick any colour you want */
+    opacity: 1; /* ensures it doesn't look faded in some browsers */
+}
+
+.prompt-text {
+    bottom: 18%;
+    left: 18%;
+
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+
+    z-index: 1;
+}
+
+/* Buttons */
+
 .reset-button {
     top: 65%;
     left: 10%;
@@ -96,6 +166,8 @@ body {
 
     font-family: 'Jost';
     font-weight: 700;
+    color: white;
+
 
     border: none;
     border-radius: 50%;
@@ -106,5 +178,55 @@ body {
 
 .reset-button:active {
     transform: translate(-3px, 2px);
+    box-shadow: 0 0 #252121;
+}
+
+.left-button {
+    top: 70%;
+    right: 35%;
+
+    background-color: #58595b;
+    height: 25px;
+    width: 50px;
+
+    font-family: 'Jost';
+    font-weight: 700;
+    color: white;
+
+
+    border: none;
+    border-radius: 1px;
+    box-shadow: -1px 2px #252121;
+
+    transition: all 0.1s ease;
+}
+
+.left-button:active {
+    transform: translate(-1px, 2px);
+    box-shadow: 0 0 #252121;
+}
+
+.right-button {
+    top: 70%;
+    right: 20%;
+
+    background-color: #58595b;
+    height: 25px;
+    width: 50px;
+
+    font-family: 'Jost';
+    font-weight: 700;
+    color: white;
+
+
+    border: none;
+    border-radius: 1px;
+    box-shadow: -1px 2px #252121;
+
+    transition: all 0.1s ease;
+}
+
+.right-button:active {
+    transform: translate(-1px, 2px);
     box-shadow: 0 0 #252121;
 }
